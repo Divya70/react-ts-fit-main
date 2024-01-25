@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+.container-w {
+  max-width: 1278px;
+  margin: 0 auto;
+}
+.body-setThree {
+  background-image: url("https://www.fixhealth.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fqtv93d5ym%2Findian-american-docpng_uQ6wLF8FE&w=3840&q=75");
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  max-width: 100vw;
+  height: 100vh;
+}
+@media only screen and (max-width: 720px) {
+  .body-setThree {
+    backdrop-filter: blur(5px);
+    max-width: 100vw;
+    height: 30vh;
+  }
+}

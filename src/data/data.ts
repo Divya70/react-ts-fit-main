@@ -1,0 +1,158 @@
+function generateRandomKey(length: number) {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+  let randomKey = ""
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length)
+    randomKey += characters.charAt(randomIndex)
+  }
+
+  return randomKey
+}
+
+function generateRandomAddress() {
+  // Sample data for demonstration purposes
+  const streets = ["Main St", "Oak Ave", "Elm Blvd", "Maple Ln"]
+  const cities = ["Cityville", "Townburg", "Villagetown", "Hamletville"]
+  const states = ["CA", "NY", "TX", "FL"]
+  const zipCodes = ["10001", "90210", "75001", "33101"]
+
+  // Randomly select components of the address
+  const street = getRandomElement(streets)
+  const city = getRandomElement(cities)
+  const state = getRandomElement(states)
+  const zipCode = getRandomElement(zipCodes)
+
+  // Construct the address string
+  const address = `${getRandomNumber(1, 9999)} ${street}, ${city}, ${state} ${zipCode}`
+
+  return address
+}
+
+function getRandomElement(array: any) {
+  // Return a random element from the array
+  const randomIndex = Math.floor(Math.random() * array.length)
+  return array[randomIndex]
+}
+
+function getRandomNumber(min: number, max: number) {
+  // Return a random number between min and max (inclusive)
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+//
+function generateRandomStars() {
+  const numberOfStars = getRandomNumberS(1, 4)
+  const starCharacter = "&#9733"
+  const yellowStar =
+    '<span style="  margin-left : 4px  ;   color: rgb(255, 181, 115)";     ">' +
+    starCharacter
+  // + "</span>"
+
+  const stars = yellowStar.repeat(numberOfStars)
+
+  return stars
+}
+
+function getRandomNumberS(min: number, max: number) {
+  // Return a random number between min and max (inclusive)
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+export const data = [
+  {
+    title: "localhost live ",
+    imgUrl:
+      "https://staticg.sportskeeda.com/editor/2023/08/63291-16913969569317-1920.jpg",
+    key: generateRandomKey(5),
+    word: "Your assessment method is so good & patient support resolves issues promptly",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+  {
+    title: "lorem ipsum 23",
+    imgUrl:
+      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71WwQ5By4SL._AC_UF1000,1000_QL80_.jpg",
+    key: generateRandomKey(5),
+    word: "Your assessment method is so good & patient support resolves issues promptly",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+  {
+    title: "bna the kei",
+    imgUrl:
+      "https://static.toiimg.com/thumb/msid-104477833,width-1280,height-720,resizemode-4/104477833.jpg",
+    key: generateRandomKey(5),
+    word: "Your assessment method is so good & patient support resolves issues promptly",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+  {
+    title: "itachi ",
+    imgUrl:
+      "https://dw9to29mmj727.cloudfront.net/promo/2016/6231-SeriesHeaders_HxH_2000x800.jpg",
+    key: generateRandomKey(5),
+    word: "Your assessment method is so good & patient support resolves issues promptly",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+  {
+    title: "Goku Uchiha",
+
+    imgUrl:
+      "https://i.redd.it/zenkai-announcement-today-and-most-likely-i-think-its-going-v0-3086970tdp9a1.png?width=256&format=png&auto=webp&s=e81710f7dea459430bd75200a346e74d5cc579ac",
+    key: generateRandomKey(5),
+    word: "Quality, pocket friendly & consistent care is what Fix Health stands for",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+
+  {
+    title: "Madara Uchiha",
+
+    imgUrl:
+      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f849f1e6-b991-4b89-bd9b-7b86ae209054/d8xqso3-9dbbfcd8-00ac-4474-8cc3-e61053233dce.png/v1/fill/w_1024,h_1707/itachi_uchiha_render_by_lwisf3rxd_d8xqso3-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTcwNyIsInBhdGgiOiJcL2ZcL2Y4NDlmMWU2LWI5OTEtNGI4OS1iZDliLTdiODZhZTIwOTA1NFwvZDh4cXNvMy05ZGJiZmNkOC0wMGFjLTQ0NzQtOGNjMy1lNjEwNTMyMzNkY2UucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DAD5AuG8hX8oZ_BlQCxi8jsEKEIMc2-WHSb92eMiJlI",
+    key: generateRandomKey(5),
+    word: "Quality, pocket friendly & consistent care is what Fix Health stands for",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+
+  {
+    title: "Sasuke",
+    imgUrl:
+      "https://cdn.freelogovectors.net/wp-content/uploads/2012/04/pikachu.png",
+    key: generateRandomKey(5),
+    word: "Quality, pocket friendly & consistent care is what Fix Health stands for",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+
+  {
+    title: "Mrs. Dennis Schulist    ",
+    imgUrl: "https://www.pngmart.com/files/13/Charmander-PNG-Transparent.png",
+    key: generateRandomKey(5),
+    word: "They worked around time zone variations to accommodate my schedule",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+  {
+    title: "localhost live ",
+    imgUrl:
+      "https://staticg.sportskeeda.com/editor/2023/08/63291-16913969569317-1920.jpg",
+    key: generateRandomKey(5),
+    word: "They worked around time zone variations to accommodate my schedule",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+  {
+    title: "lorem ipsum 23",
+    imgUrl:
+      "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71WwQ5By4SL._AC_UF1000,1000_QL80_.jpg",
+    key: generateRandomKey(5),
+    word: "They worked around time zone variations to accommodate my schedule",
+    address: generateRandomAddress(),
+    rating: generateRandomStars(),
+  },
+]

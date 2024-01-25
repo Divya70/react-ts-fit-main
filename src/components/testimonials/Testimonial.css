@@ -1,0 +1,19 @@
+.testi-wrapper{
+    margin: 0 auto;
+    width: 80%;
+    background-color: gainsboro;
+}
+.arrow-left{
+    max-width: 2rem;
+    position: absolute;
+    background-color: red;
+    right: 4;
+    top: .5rem;
+}
+.arrow-right{
+    max-width: 2rem;
+    position: absolute;
+    background-color: red;
+    right: 4;
+    top: .5rem;
+}
